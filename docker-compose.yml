@@ -1,0 +1,23 @@
+version: '2.2'
+
+####
+## NETWORKS
+####
+
+networks:
+
+  tar1090:
+    driver: bridge
+
+####
+## SERVICES
+####
+
+services:
+
+  tar1090-mlat-server:
+    container_name: tar1090-mlat-server
+    build: .
+    image: sign0/tar1090-mlat-server
+    networks:
+      - tar1090
