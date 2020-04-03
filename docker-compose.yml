@@ -19,5 +19,7 @@ services:
     container_name: tar1090-mlat-server
     build: .
     image: sign0/tar1090-mlat-server
+    ports:
+      - 0.0.0.0:30000:30000
     networks:
       - tar1090
